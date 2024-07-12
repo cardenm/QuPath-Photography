@@ -1,0 +1,6 @@
+As we continue to rely on our photomicroscope less and less, I've taken to optimizing my QuPath/ImageJ workflow to help our pathologists capture publication-ready images as quickly as possible. It can be tricky (impossible) to produce images with consistent dimensions, and the downsampling factors change with every WSI set and at every mag. So I wrote this little (groovy) user script to do the following: 
+
+1.	Automate the creation of a rectangular annotation at the exact dimensions of the viewport
+2.	Send the annotated region to ImageJ with a downsampling factor which will produce an image at or very near your target filesize. The target included in the script is currently set at 100MB because I like to start with a large file and scale it down when it gets edited for the page in Photoshop.
+
+I have no idea if anyone else working in imaging for digital pathology has struggled with finding a quick photography solution, but I have and I thought I would share. Our imaging department accommodates a heavy volume of whole slide scanning requests and a photography request, with its disproportionate level of required effort, can really slow things down in my experience. This script reduces the time to completion in these projects by at least 50%. Huge gains for me and hopefully for you as well.
